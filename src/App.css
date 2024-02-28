@@ -1,0 +1,35 @@
+body{
+    background-color:#fffafb
+}
+.overlay::after{
+    content:'EXERCISE';
+    font-size:8rem;
+    background:linear-gradient(to right,rgb(248, 199, 207),rgb(246, 208, 208));
+    background-clip:text;
+    color:transparent;
+    z-index:-1;
+    font-family: system-ui;
+    overflow:hidden
+}
+.gym-types::-webkit-scrollbar{
+width:0
+}
+.equipment-types::-webkit-scrollbar{
+  width:0,
+}
+svg {
+    width: 100%;
+  }
+  .loader{
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #ddc;
+    letter-spacing: .2rem;
+    margin: 5rem auto;
+    width: 10rem;
+    text-align: center
+  }
+  #marker{
+    color:rgb(245, 49, 49);
+  }
