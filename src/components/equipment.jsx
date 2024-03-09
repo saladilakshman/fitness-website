@@ -60,6 +60,10 @@ const EquipmentList = ({ equipmentname }) => {
                 sx={{
                   backgroundColor: "#ff2625",
                   color: "white",
+                  '&:hover': {
+                    backgroundColor: "#ff2625",
+                    color: "white",
+                  }
                 }}
                 onClick={() => scroll_navigation('.equipment-types', -700)}
               >
@@ -69,6 +73,10 @@ const EquipmentList = ({ equipmentname }) => {
                 sx={{
                   backgroundColor: "#ff2625",
                   color: "white",
+                  '&:hover': {
+                    backgroundColor: "#ff2625",
+                    color: "white",
+                  }
                 }}
                 onClick={() => scroll_navigation('.equipment-types', 700)}
               >

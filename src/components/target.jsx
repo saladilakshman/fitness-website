@@ -60,6 +60,10 @@ const TargetList = ({ targetname }) => {
                     sx={{
                       backgroundColor: "#ff2625",
                       color: "white",
+                      '&:hover': {
+                        backgroundColor: "#ff2625",
+                        color: "white",
+                      }
                     }}
                     onClick={() => scroll_navigation('.target-types', -700)}
                   >
@@ -69,6 +73,10 @@ const TargetList = ({ targetname }) => {
                     sx={{
                       backgroundColor: "#ff2625",
                       color: "white",
+                      '&:hover': {
+                        backgroundColor: "#ff2625",
+                        color: "white",
+                      }
                     }}
                     onClick={() => scroll_navigation('.target-types', 700)}
                   >

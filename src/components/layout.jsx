@@ -20,11 +20,11 @@ export const Layout = ({ Id, gifurl, name, muscles }) => {
           alt=""
           src={gifurl}
           sx={{
-            width: { xs: 200, sm: 320, lg: 330 },
-            height: { xs: 200, sm: 300, lg: 320 },
-            aspectRatio: 2 / 3,
-            objectFit: 'cover'
+            minWidth: '100%',
+
+            objectFit: 'contain'
           }}
+          loading="lazy"
         />
         <Stack
           direction="row"

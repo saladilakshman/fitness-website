@@ -246,6 +246,7 @@ export const Homepage = () => {
                         display: "block",
                         margin: "auto",
                       }}
+                      loading="lazy"
                     />
                     <Typography variant="h6" textAlign="center" sx={{ pt: 2 }}>
                       {gymtype}
