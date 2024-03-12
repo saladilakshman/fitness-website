@@ -8,7 +8,7 @@ export const Layout = ({ Id, gifurl, name, muscles }) => {
   const navigate = useNavigate();
   return (
     <>
-      <Paper sx={appStyles.paper} onClick={() => {
+      <Paper sx={{ ...appStyles.paper, maxWidth: 'auto' }} onClick={() => {
         navigate(`/${Id}`)
         document.documentElement.scrollTo({
           top: 0,
@@ -21,8 +21,7 @@ export const Layout = ({ Id, gifurl, name, muscles }) => {
           src={gifurl}
           sx={{
             minWidth: '100%',
-
-            objectFit: 'contain'
+            height: '100%',
           }}
           loading="lazy"
         />

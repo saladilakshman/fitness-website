@@ -52,7 +52,7 @@ const Exercise = () => {
             flexWrap={isMobile ? "wrap" : "nowrap"}
           >
             <Box>
-              <Box component="img" alt="" src={data.gifUrl} />
+              <Box component="img" alt="" src={data.gifUrl} sx={{ display: 'block', margin: 'auto' }} />
             </Box>
             <Box
               sx={{
