@@ -15,7 +15,7 @@ const TargetList = ({ targetname }) => {
     <>
       {isLoading && <Loader />}
       {isError && (
-        <Typography variant="h4">Oops! something went wrong</Typography>
+        <Typography variant="h4" textAlign="center" sx={{ paddingBlockStart: 2 }}>Oops! something went wrong</Typography>
       )}
       <div style={{ position: 'relative' }}>
         <Stack
