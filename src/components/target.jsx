@@ -15,9 +15,15 @@ const TargetList = ({ targetname }) => {
     <>
       {isLoading && <Loader />}
       {isError && (
-        <Typography variant="h4" textAlign="center" sx={{ paddingBlockStart: 2 }}>Oops! something went wrong</Typography>
+        <Typography
+          variant="h4"
+          textAlign="center"
+          sx={{ paddingBlockStart: 2 }}
+        >
+          Oops! something went wrong
+        </Typography>
       )}
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: "relative" }}>
         <Stack
           direction="row"
           justifyContent={"flex-start"}
@@ -31,7 +37,7 @@ const TargetList = ({ targetname }) => {
         >
           {data && (
             <>
-              {data.map((item) => {
+              {data?.map((item) => {
                 const { id, gifUrl, name, secondaryMuscles } = item;
                 return (
                   <Layout
@@ -41,7 +47,6 @@ const TargetList = ({ targetname }) => {
                     name={name}
                     muscles={secondaryMuscles}
                   />
-
                 );
               })}
               {!isMobile && (
@@ -60,12 +65,12 @@ const TargetList = ({ targetname }) => {
                     sx={{
                       backgroundColor: "#ff2625",
                       color: "white",
-                      '&:hover': {
+                      "&:hover": {
                         backgroundColor: "#ff2625",
                         color: "white",
-                      }
+                      },
                     }}
-                    onClick={() => scroll_navigation('.target-types', -700)}
+                    onClick={() => scroll_navigation(".target-types", -700)}
                   >
                     <WestIcon />
                   </IconButton>
@@ -73,17 +78,16 @@ const TargetList = ({ targetname }) => {
                     sx={{
                       backgroundColor: "#ff2625",
                       color: "white",
-                      '&:hover': {
+                      "&:hover": {
                         backgroundColor: "#ff2625",
                         color: "white",
-                      }
+                      },
                     }}
-                    onClick={() => scroll_navigation('.target-types', 700)}
+                    onClick={() => scroll_navigation(".target-types", 700)}
                   >
                     <EastIcon />
                   </IconButton>
                 </Stack>
-
               )}
             </>
           )}

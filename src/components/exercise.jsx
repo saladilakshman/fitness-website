@@ -30,10 +30,12 @@ const Exercise = () => {
     },
   ];
   return (
-    <Container sx={{
-      p: 2,
-      marginBlockEnd: 5
-    }}>
+    <Container
+      sx={{
+        p: 2,
+        marginBlockEnd: 5,
+      }}
+    >
       <Box
         sx={{
           paddingBlockStart: 5,
@@ -52,7 +54,12 @@ const Exercise = () => {
             flexWrap={isMobile ? "wrap" : "nowrap"}
           >
             <Box>
-              <Box component="img" alt="" src={data.gifUrl} sx={{ display: 'block', margin: 'auto' }} />
+              <Box
+                component="img"
+                alt=""
+                src={data.gifUrl}
+                sx={{ display: "block", margin: "auto" }}
+              />
             </Box>
             <Box
               sx={{
@@ -84,7 +91,7 @@ const Exercise = () => {
                   paddingBlockStart: 5,
                 }}
               >
-                {Array.from(gymtools, ({ src, name }, index) => {
+                {Array?.from(gymtools, ({ src, name }, index) => {
                   return (
                     <Box
                       key={index}
@@ -125,9 +132,11 @@ const Exercise = () => {
 
       {/** JSX component for displaying youtube videos**/}
 
-      <Box sx={{
-        paddingBlockStart: 12
-      }}>
+      <Box
+        sx={{
+          paddingBlockStart: 12,
+        }}
+      >
         <Typography variant="h4">
           Youtube videos realted to <span id="marker">{data?.name}</span>
         </Typography>
@@ -138,7 +147,7 @@ const Exercise = () => {
       <Box
         sx={{
           marginBlockStart: 15,
-          width: '100%'
+          width: "100%",
         }}
       >
         <Typography variant="h4">

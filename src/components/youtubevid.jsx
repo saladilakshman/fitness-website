@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { keys } from "../../keys"
+import { keys } from "../../keys";
 import { Grid, Typography, Box } from "@mui/material";
 import Loader from "./loader";
 // eslint-disable-next-line react/prop-types
@@ -18,8 +18,7 @@ const YoutubeVideo = ({ videosearchtext }) => {
           query: videosearchtext,
         },
         headers: {
-          "X-RapidAPI-Key":
-            keys.youtube,
+          "X-RapidAPI-Key": keys.youtube,
           "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
         },
       };
@@ -27,13 +26,13 @@ const YoutubeVideo = ({ videosearchtext }) => {
       try {
         const response = await axios.request(options);
         setExercisevideos(response.data.contents);
-        setIsloading(false)
-        setIsError(false)
+        setIsloading(false);
+        setIsError(false);
       } catch (error) {
         console.error(error);
-        setExercisevideos([])
-        setIsloading(false)
-        setIsError(true)
+        setExercisevideos([]);
+        setIsloading(false);
+        setIsError(true);
       }
     };
     youtubevideo();
@@ -41,11 +40,20 @@ const YoutubeVideo = ({ videosearchtext }) => {
   return (
     <>
       {isloading && <Loader />}
-      {iserror && <Typography variant="h4" color="inherit" textAlign="center" sx={{
-        paddingBlockStart: 4
-      }}>Oops!something went wrong</Typography>}
+      {iserror && (
+        <Typography
+          variant="h4"
+          color="inherit"
+          textAlign="center"
+          sx={{
+            paddingBlockStart: 4,
+          }}
+        >
+          Oops!something went wrong
+        </Typography>
+      )}
       <Grid container spacing={5} rowSapcing={4}>
-        {exercisevideos.slice(0, 6).map((video, index) => {
+        {exercisevideos?.slice(0, 6)?.map((video, index) => {
           const { title, videoId, thumbnails } = video.video;
           console.log(title);
           return (
@@ -61,8 +69,8 @@ const YoutubeVideo = ({ videosearchtext }) => {
                 component="a"
                 href={`https://www.youtube.com/watch?v=${videoId}`}
                 sx={{
-                  textDecoration: 'none',
-                  color: 'inherit'
+                  textDecoration: "none",
+                  color: "inherit",
                 }}
               >
                 <Box

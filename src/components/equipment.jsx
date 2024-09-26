@@ -20,7 +20,7 @@ const EquipmentList = ({ equipmentname }) => {
         <Typography variant="h4">Oops! something went wrong</Typography>
       )}
       {data && (
-        <Box position="relative" sx={{ width: '100%' }}>
+        <Box position="relative" sx={{ width: "100%" }}>
           <Stack
             direction="row"
             justifyContent="flex-start"
@@ -33,7 +33,7 @@ const EquipmentList = ({ equipmentname }) => {
             }}
             spacing={2}
           >
-            {data.map((item) => {
+            {data?.map((item) => {
               const { id, gifUrl, name, secondaryMuscles } = item;
               return (
                 <Layout
@@ -60,12 +60,12 @@ const EquipmentList = ({ equipmentname }) => {
                 sx={{
                   backgroundColor: "#ff2625",
                   color: "white",
-                  '&:hover': {
+                  "&:hover": {
                     backgroundColor: "#ff2625",
                     color: "white",
-                  }
+                  },
                 }}
-                onClick={() => scroll_navigation('.equipment-types', -700)}
+                onClick={() => scroll_navigation(".equipment-types", -700)}
               >
                 <WestIcon />
               </IconButton>
@@ -73,12 +73,12 @@ const EquipmentList = ({ equipmentname }) => {
                 sx={{
                   backgroundColor: "#ff2625",
                   color: "white",
-                  '&:hover': {
+                  "&:hover": {
                     backgroundColor: "#ff2625",
                     color: "white",
-                  }
+                  },
                 }}
-                onClick={() => scroll_navigation('.equipment-types', 700)}
+                onClick={() => scroll_navigation(".equipment-types", 700)}
               >
                 <EastIcon />
               </IconButton>
